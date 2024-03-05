@@ -1,5 +1,6 @@
 #include <stdio.h>
-void hangman_hang(int x) {
+void hangman_hang(int x) 
+{
     int counter=0;
      FILE* f = fopen("hangmans_hang.txt", "r");
         const unsigned MAX_LENGTH = 500;
@@ -48,6 +49,7 @@ void calltitle()
     printf("%s", buffer);
     
 }
+
 int main() 
 {
     calltitle();
