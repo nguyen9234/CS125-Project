@@ -40,7 +40,7 @@ int main()
     srand(time(NULL));
     char* word;
     word = easy_word();
-    printf("%c", word[2]);
+    printf("%s", word);
     return 0;
 }
 */
