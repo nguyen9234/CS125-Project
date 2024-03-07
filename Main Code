@@ -53,7 +53,8 @@ void calltitle()
 int main() 
 {
     calltitle();
-    
+    printf("\n");
+
     int error=0;
     if (error == 0){
 
