@@ -47,6 +47,9 @@ int main()
     {
         printf("Guess a letter: ");
         scanf(" %c", &guess);
+        guess = tolower(guess);
+
+        int found=0;
         for(i=0; i<5; i++)
         {
             if (guess == word[i])
@@ -54,12 +57,12 @@ int main()
                 null_word[i] = word[i];
             }
             
-            if ((i == 5) && (guess != word[i]))
+           
+        }
+        if ((i == 5) && (guess != word[i]))
             {
                 printf("error\n");
             }
-        }
-        
         printf("%s\n", null_word);
        
     }
@@ -67,7 +70,7 @@ int main()
     return 0;
 }
 
-
+//main
 int main()
 {
     int count=0, i;
@@ -85,26 +88,23 @@ int main()
     {
         printf("Guess a letter: ");
         scanf(" %c", &guess);
-        //guess = char_lower_case(guess);
+        guess = tolower(guess);
+
+        int found = 0;
+       
         for(i=0; i<5; i++)
         {
             if (guess == word[i])
             {
-                null_word[i] = word[i];
-                
+                null_word[i] = word[i];  
             }
-            else if(guess != word[i])
-            {
-                printf("Error\n");
-                
-            }
-            
             
         }
-        c = strcmp(null_word, word);
-        if (strcmp(null_word, word) != c)
+        
+        if (!found)
         {   
             printf("Error\n");
+            count++;
         }
         
         printf("%d\n", c);
