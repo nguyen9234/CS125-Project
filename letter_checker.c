@@ -96,7 +96,8 @@ int main()
         {
             if (guess == word[i])
             {
-                null_word[i] = word[i];  
+                null_word[i] = word[i]; 
+                found++;
             }
             
         }
