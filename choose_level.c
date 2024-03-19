@@ -1,3 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char* easy_word();
+char* med_word();
+char* hard_word();
+
 //User types in a number to choose level 
 //Function for selected level will be called
 //Returns a random word
@@ -26,5 +33,4 @@ char* choose_level(int a)
       word = hard_word();
       
   return word;
-  
 }      
