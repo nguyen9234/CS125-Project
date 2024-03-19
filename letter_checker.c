@@ -1,76 +1,47 @@
-char letter_checker(char a)
-{
-    int count=0, i;
-    char* null_word[10] = "-----";
-    
-    
-    
-    printf("Guess a letter: ");
-    scanf(" %c", &a);
-    while (strcmp(null_word, word) < -10)
-    {
-       
-        for(i=0; i<5; i++)
-        {
-            if (a == word[i])
-            {
-                null_word[i] = word[i];
-                
-            }
-        
-        }
-        
-        printf("%s\n", null_word);
-        printf("Guess a letter: ");
-        scanf(" %c", &a);   
-    }
-    return null_word;
-}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
+char* easy_word();
+char* med_word();
+char* hard_word();
+char* choose_level(int a);
 
-int main()
+void letter_checker(char a, int b)
 {
-    /* Starter var for checking */
-    int count=0, i;
     char null_word[10] = "-----";
-    char guess;
-    
-    
-    srand(time(NULL));
-    char* word;
-    word = easy_word();
-    printf("%s\n", word);
-   
-    //Notes: guess right answer, dashed lines replaced with the letter
-    //Need to figure out: error checking, lowercase/uppercase
+    int count=0,i;
+    char* word = choose_level(b);   
     while ((strcmp(null_word, word) < -10) && (count < 6))
     {
+        
         printf("Guess a letter: ");
-        scanf(" %c", &guess);
-        guess = tolower(guess);
+        scanf(" %c", &a);
+        char guess = tolower(a);
 
-        int found=0;
+        int found = 0;
+       
         for(i=0; i<5; i++)
         {
             if (guess == word[i])
             {
-                null_word[i] = word[i];
-            }
-            
-           
+                null_word[i] = word[i];  
+                found++;
+            } 
         }
-        if ((i == 5) && (guess != word[i]))
-            {
-                printf("error\n");
-            }
+        
+        if (!found)
+        {   
+            printf("Error\n");
+            count++;
+        }
+        
         printf("%s\n", null_word);
-       
-    }
-
-    return 0;
+    }  
 }
 
-//main
+/*main
 int main()
 {
     int count=0, i;
@@ -114,4 +85,4 @@ int main()
     }
 
     return 0;
-}
+}*/
