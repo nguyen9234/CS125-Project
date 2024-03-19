@@ -7,12 +7,16 @@ char* easy_word();
 char* med_word();
 char* hard_word();
 char* choose_level(int a);
+char* dash(char a);
 
 void letter_checker(char a, int b)
 {
-    char null_word[10] = "-----";
+    //char null_word[10] = "-----";
+
     int count=0,i;
-    char* word = choose_level(b);   
+    char* word = choose_level(b); 
+    char* null_word = dash(*word);
+    
     while ((strcmp(null_word, word) < -10) && (count < 6))
     {
         
