@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
 void hangman_hang(int x) 
 {
     int counter=0;
@@ -50,11 +54,8 @@ void calltitle()
     
 }
 
-int main() 
+void hang()
 {
-    calltitle();
-    printf("\n");
-
     int error=0;
     if (error == 0){
 
@@ -81,3 +82,157 @@ int main()
     }
 }
 
+char* easy_word();
+char* med_word();
+char* hard_word();
+
+//User types in a number to choose level 
+//Function for selected level will be called
+//Returns a random word
+
+char* choose_level(int a)
+{
+  char* word;
+  int option;
+  while((a != 1) && (a != 2) && (a != 3))
+  {
+      printf("Invalid option\n");
+      printf("What level would you like to play?");
+      scanf("%d", &a);
+      
+      if ((a == 1) || (a == 2) || (a == 3))
+        break;
+  }
+  
+  if ((a == 1) || (option == 1))
+      word = easy_word();
+  
+  else if ((a == 2) || (option == 2))
+      word = med_word();
+  
+  else if ((a == 3) || (option == 3))
+      word = hard_word();
+      
+  return word;
+}      
+
+char* easy_word()
+{
+    char* word = malloc(15);
+    
+    /* Puts words into a txt file */
+    FILE *ptr = fopen("easy_words.txt", "w");
+    char word_1[15] = "aware\n";
+    char word_2[15] = "equal\n";
+    char word_3[15] = "sense\n";
+    char word_4[15] = "stake\n";
+    char word_5[15] = "chase\n";
+    fputs(word_1, ptr);
+    fputs(word_2, ptr);
+    fputs(word_3, ptr);
+    fputs(word_4, ptr);
+    fputs(word_5, ptr);
+    fclose(ptr);
+    
+    int num, i;
+    num = rand()%5+1;
+    
+    ptr = fopen("easy_words.txt", "r");
+    
+    /* Randomly selects word and returns it*/
+    for(i=0;i<num;i++)
+    {
+        fgets(word, 15, ptr);
+    }
+    
+    return word;
+    
+}
+
+char* med_word()
+{
+    char* word = malloc(15);
+    
+    /* Puts words into a txt file */
+    FILE *ptr = fopen("med_words.txt", "w");
+    char word_1[15] = "dilemma\n";
+    char word_2[15] = "soldier\n";
+    char word_3[15] = "seminar\n";
+    char word_4[15] = "contact\n";
+    char word_5[15] = "climate\n";
+    fputs(word_1, ptr);
+    fputs(word_2, ptr);
+    fputs(word_3, ptr);
+    fputs(word_4, ptr);
+    fputs(word_5, ptr);
+    fclose(ptr);
+    
+    int num, i;
+    num = rand()%5+1;
+    
+    ptr = fopen("med_words.txt", "r");
+    
+    /* Randomly selects word and returns it*/
+    for(i=0;i<num;i++)
+    {
+        fgets(word, 15, ptr);
+    }
+    
+    return word;
+    
+}
+
+char* hard_word()
+{
+    char* word = malloc(15);
+    
+    /* Puts words into a txt file */
+    FILE *ptr = fopen("hard_words.txt", "w");
+    char word_1[15] = "wiggle worm\n";
+    char word_2[15] = "flat earth\n";
+   
+    fputs(word_1, ptr);
+    fputs(word_2, ptr);
+   
+    fclose(ptr);
+    
+    int num, i;
+    num = rand()%2+1;
+    
+    ptr = fopen("hard_words.txt", "r");
+    
+    /* Randomly selects word and returns it*/
+    for(i=0;i<num;i++)
+    {
+        fgets(word, 15, ptr);
+    }
+   
+    return word;
+}
+char dash(char a)
+{
+    srand(time(NULL));
+    char* word;
+    *word = a;
+    //printf("%s", word); //Prints word to check dashes
+    
+    int len, x;
+    len = strlen(word)-1;
+    for(x=0; x<len; x++)
+    {
+        printf("_ ");
+    }
+    
+}
+int main()
+{
+    int choice;
+    const char *word;
+    calltitle();
+    printf("\n");
+    hang();
+    printf("Whar difficulty would you like to play? (1 = easy  2 = medium  3 = hard) :");
+    scanf("%d", &choice);
+    word = choose_level(choice);
+    dash(*word);
+}
