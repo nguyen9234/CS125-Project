@@ -42,3 +42,27 @@ char* dash(char a)
 
     return null_word;
 }
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+char* dash(char *a)
+{
+
+    
+    int len, x;
+    len = strlen(a)-1;
+    char* null_word = malloc(20); 
+    
+    for(x=0; x<len; x++)
+    {
+        null_word[x] = '_';
+    }
+    printf("\n");
+    
+    return null_word;
+}
