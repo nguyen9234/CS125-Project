@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+void success()
+{
+    FILE* f = fopen("success.txt", "r");
+        const unsigned MAX_LENGTH = 500;
+        char buffer[MAX_LENGTH];
+        
+        while (fgets(buffer, MAX_LENGTH, f))
+        printf("%s", buffer);
+
+    
+}
+
+void failure()
+{
+    FILE* f = fopen("failure.txt", "r");
+        const unsigned MAX_LENGTH = 500;
+        char buffer[MAX_LENGTH];
+        
+        while (fgets(buffer, MAX_LENGTH, f))
+        printf("%s", buffer);
+
+    
+}
+
+/*int main()
+{
+    int x;
+    printf("Win or lose, (1 or 0) ");
+    scanf("%d", &x);
+    
+    if(x==1){
+        success();
+    }
+    else{
+        failure();
+    }
+}
