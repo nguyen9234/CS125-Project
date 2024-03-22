@@ -1,45 +1,20 @@
-char dash(char a)
-{
-    srand(time(NULL));
-    char* word;
-    *word = a;
-    printf("%s", word);
-    
-    int len, x;
-    len = strlen(word)-1;
-    for(x=0; x<len; x++)
-    {
-        printf("_ ");
-    }
-    
-}
-
-
-
-//word to dash alternate version?
-//try to put into a txt file, like the word selectors
+//Fixed Version
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include <ctype.h>
-
-char* dash(char a)
+char* dash(char *a)
 {
-    //srand(time(NULL));
-    char* word;
-    *word = a;
-    //printf("%s", word);
-    
     int len, x;
-    len = strlen(word)-1;
-    char* null_word[20]; 
+    len = strlen(a);
+    char* null_word = malloc(len); 
     
     for(x=0; x<len; x++)
     {
-        null_word[x] = "_";
+        null_word[x] = '_';
     }
-
+    //null_word[len]='\0';
+    
     return null_word;
 }
 
