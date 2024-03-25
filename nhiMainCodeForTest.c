@@ -9,7 +9,7 @@ char* med_word();
 char* hard_word();
 char* choose_level(int a);
 char* dash(char *a);
-char* letter_checker(char a, int b);
+char* letter_checker(int b);
 
 int main()
 {
@@ -23,6 +23,6 @@ int main()
     
     
 
-    letter_checker(guess, option);
+    letter_checker( option);
     return 0;
 }
