@@ -11,8 +11,8 @@ char* hard_word()
     
     /* Puts words into a txt file */
     FILE *ptr = fopen("hard_words.txt", "w");
-    char word_1[15] = "wiggle worm\n";
-    char word_2[15] = "flat earth\n";
+    char word_1[15] = "wiggleyworm\n";
+    char word_2[15] = "flatearth\n";
    
     fputs(word_1, ptr);
     fputs(word_2, ptr);
