@@ -1,4 +1,3 @@
-//Fixed Version
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,35 +8,11 @@ char* dash(char *a)
     len = strlen(a);
     char* null_word = malloc(len); 
     
-    for(x=0; x<len; x++)
+    for(x=0; x<(len); x++)
     {
         null_word[x] = '_';
     }
-    //null_word[len]='\0';
-    
-    return null_word;
-}
-
-
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-
-char* dash(char *a)
-{
-
-    
-    int len, x;
-    len = strlen(a)-1;
-    char* null_word = malloc(20); 
-    
-    for(x=0; x<len; x++)
-    {
-        null_word[x] = '_';
-    }
-    printf("\n");
+    null_word[len]='\0';
     
     return null_word;
 }
