@@ -10,6 +10,9 @@ char* hard_word();
 char* choose_level(int a);
 char* dash(char *a);
 char* letter_checker(int b);
+void calltitle();
+void print_hangmans_hang(int x);
+void hangman_hang(int x);
 
 int main()
 {
@@ -18,11 +21,12 @@ int main()
     int option;
     char guess;
     
+    calltitle();
+    printf("\n\n");
+    
     printf("What level would you like to play?");
     scanf("%d", &option);
     
-    
-
-    letter_checker( option);
+    letter_checker(option);
     return 0;
 }
