@@ -30,20 +30,9 @@ char* med_word()
     /* Randomly selects word and returns it*/
     for(i=0;i<num;i++)
     {
-        fgets(word, 15, ptr);
+        fscanf(ptr, "%s", word);
     }
     
     return word;
     
 }
-
-/* Use for checking  
-int main()
-{
-    srand(time(NULL));
-    char* word;
-    word = med_word();
-    printf("%s", word);
-    return 0;
-}
-*/
