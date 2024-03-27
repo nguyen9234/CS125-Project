@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+void calltitle()
 {
         FILE* f = fopen("Hangman.txt", "r");
 
