@@ -45,9 +45,8 @@ void letter_checker(int b)
             print_hangmans_hang(count);
             count++;
         }
-        
-        printf("%s\n", null_word);
-       
+        printf("%s\n", null_word); 
     }  
+    //return win_lose;
 }
 
