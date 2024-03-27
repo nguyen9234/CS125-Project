@@ -24,7 +24,7 @@ int main()
     calltitle();
     printf("\n\n");
     
-    printf("What level would you like to play?");
+    printf("What level would you like to play? (1=easy, 2=medium, 3=hard)");
     scanf("%d", &option);
     
     letter_checker(option);
