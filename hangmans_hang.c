@@ -36,29 +36,3 @@ void hangman_hang(int x) {
             }
         }
 }
-int main() {
-    int error=6;
-    if (error == 0){
-
-        hangman_hang(0);
-    }
-    else if (error == 1){
-
-        hangman_hang(1);
-    }
-    else if(error ==2){
-        hangman_hang(2);
-    }
-    else if(error ==3){
-        hangman_hang(3);
-    }
-    else if(error ==4){
-        hangman_hang(4);
-    }
-    else if(error ==5){
-        hangman_hang(5);
-    }
-    else if(error ==6){
-        hangman_hang(6);
-    }
-}
