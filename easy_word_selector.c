@@ -16,14 +16,11 @@ char* easy_word()
     char word_3[15] = "sense\n";
     char word_4[15] = "stake\n";
     char word_5[15] = "chase\n";
+    
     fputs(word_1, ptr);
-   
     fputs(word_2, ptr);
-    
     fputs(word_3, ptr);
-    
     fputs(word_4, ptr);
-    
     fputs(word_5, ptr);
     
     fclose(ptr);
@@ -38,7 +35,5 @@ char* easy_word()
     {
         fscanf(ptr, "%s", word);
     }
-    
-    return word;
-    
+    return word;  
 }
