@@ -11,7 +11,7 @@ char* dash(char *a);
 void print_hangmans_hang(int x);
 void hangman_hang(int x);
 
-void letter_checker(int b)
+int letter_checker(int b)
 {
     //char null_word[10] = "-----";
 
@@ -47,6 +47,10 @@ void letter_checker(int b)
         }
         printf("%s\n", null_word); 
     }  
+    if (count == 6)
+        return 0;
+    else
+        return 1;
     //return win_lose;
 }
 
