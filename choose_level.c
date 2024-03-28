@@ -13,11 +13,11 @@ char* choose_level(int a)
 {
   char* word;
   int option;
-  while((a != 1) && (a != 2) && (a != 3))
+  while((a > 3) || (scanf("%d", &a) != 1))
   {
       printf("Invalid option\n");
       printf("What level would you like to play?");
-      scanf("%d", &a);
+      scanf("%*c%d", &a);
       
       if ((a == 1) || (a == 2) || (a == 3))
         break;
