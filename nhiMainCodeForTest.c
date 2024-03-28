@@ -29,10 +29,14 @@ int main()
     printf("What level would you like to play? (1=easy, 2=medium, 3=hard)");
     scanf("%d", &option);
     //win_lose = letter_checker(option);
-    letter_checker(option);
-    //if win_lose == 1
-    //   call success
-    //else if win_lose == 0
-    //   call lose
+    win_lose = letter_checker(option);
+    if (win_lose ==1)
+    {
+       success();
+    }
+    else 
+    {
+       failure();
+    }
     return 0;
 }
