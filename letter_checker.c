@@ -13,16 +13,16 @@ void hangman_hang(int x);
 
 int letter_checker(int b)
 {
-    //char null_word[10] = "-----";
-
+    //Variables
     int count=0,i,winlose;
-    
+
+    //Calls function 
     char* word = choose_level(b); 
     char* null_word = dash(word);
     printf("%s\n", null_word);
     char a;
     
-    
+    //User guesses letter
     while ((strcmp(null_word, word) != 0) && (count <= 6))
     {
         printf("Guess a letter: ");
@@ -30,7 +30,8 @@ int letter_checker(int b)
         char guess = tolower(a);
 
         int found = 0;
-       
+        
+        //If correct, update dashes with the appropriate letter
         for(i=0; i<strlen(word); i++)
         {
             if (guess == word[i])
@@ -39,7 +40,7 @@ int letter_checker(int b)
                 found++;
             } 
         }
-        
+        //If incorrect, prints the updated "hangman" image
         if (!found)
         {   
             print_hangmans_hang(count);
@@ -47,6 +48,8 @@ int letter_checker(int b)
         }
         printf("%s\n", null_word); 
     }  
+
+    //If user guessed correctly, returns a 1, if guessed incorrectly, return a 0
     if (count == 6)
     {
         winlose=0;
