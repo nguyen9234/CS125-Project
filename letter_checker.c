@@ -15,7 +15,7 @@ int letter_checker(int b)
 {
     //char null_word[10] = "-----";
 
-    int count=0,i;
+    int count=0,i,winlose;
     
     char* word = choose_level(b); 
     char* null_word = dash(word);
@@ -48,9 +48,12 @@ int letter_checker(int b)
         printf("%s\n", null_word); 
     }  
     if (count == 6)
-        return 0;
-    else
-        return 1;
-    //return win_lose;
+    {
+        winlose=0;
+    }
+    else if (strcmp(null_word, word) == 0)
+    {
+        winlose=1; 
+    }
+    return winlose;
 }
-
