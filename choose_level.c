@@ -11,8 +11,11 @@ char* hard_word();
 
 char* choose_level(int a)
 {
+  //Variables
   char* word;
   int option;
+
+  //Error Checking: if users type in a number larger than 3 or a letter
   while((a > 3) || (scanf("%d", &a) != 1))
   {
       printf("Invalid option\n");
@@ -22,7 +25,8 @@ char* choose_level(int a)
       if ((a == 1) || (a == 2) || (a == 3))
         break;
   }
-  
+
+  //Calls appropriate word selector depending on option
   if ((a == 1) || (option == 1))
       word = easy_word();
   
