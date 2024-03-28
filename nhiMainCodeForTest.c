@@ -9,7 +9,7 @@ char* med_word();
 char* hard_word();
 char* choose_level(int a);
 char* dash(char *a);
-char* letter_checker(int b);
+int letter_checker(int b);
 void calltitle();
 void print_hangmans_hang(int x);
 void hangman_hang(int x);
