@@ -7,9 +7,7 @@ void success()
         char buffer[MAX_LENGTH];
         
         while (fgets(buffer, MAX_LENGTH, f))
-        printf("%s", buffer);
-
-    
+        printf("%s", buffer);  
 }
 
 void failure()
@@ -19,9 +17,7 @@ void failure()
         char buffer[MAX_LENGTH];
         
         while (fgets(buffer, MAX_LENGTH, f))
-        printf("%s", buffer);
-
-    
+        printf("%s", buffer);  
 }
 
 /*int main()
