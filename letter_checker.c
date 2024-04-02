@@ -3,6 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
+// Main Contributor: Nhi Nguyen
+// Lines 54-63: Dakota Jacobs
 char* easy_word();
 char* med_word();
 char* hard_word();
