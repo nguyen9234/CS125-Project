@@ -5,6 +5,7 @@
 #include <ctype.h>
 
 //Contributors: Nhi Nguyen & Dakota Jacobs
+//Note: Dakota contributed with ASCII art
 
 char* easy_word();
 char* med_word();
