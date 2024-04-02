@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//Contributors: Dakota Jacobs
 void calltitle()
 {
         FILE* f = fopen("Hangman.txt", "r");
