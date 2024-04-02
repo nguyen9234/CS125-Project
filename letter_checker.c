@@ -5,6 +5,8 @@
 
 // Main Contributor: Nhi Nguyen
 // Lines 54-63: Dakota Jacobs
+// Debugging: Nhi Nguyen and Dakota Jacobs
+
 char* easy_word();
 char* med_word();
 char* hard_word();
