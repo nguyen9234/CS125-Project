@@ -7,17 +7,25 @@
 //Contributors: Nhi Nguyen & Dakota Jacobs
 //Note: Dakota contributed with ASCII art
 
-char* easy_word();
-char* med_word();
-char* hard_word();
+//Call other files
+#include "easy_word_selector.h"
+#include "med_word_selector.h"
+#include "hard_word_selector.h"
+#include "hangmans_hang.h"
+#include "print_title.h"
+
 char* choose_level(int a);
 char* dash(char *a);
 int letter_checker(int b);
-void calltitle();
-void print_hangmans_hang(int x);
 void hangman_hang(int x);
 void success();
 void failure();
+
+//char* easy_word();
+//char* med_word();
+//char* hard_word();
+//void print_hangmans_hang(int x);
+//void calltitle();
 
 int main()
 {
