@@ -3,6 +3,7 @@
 #include <time.h>
 #include <string.h>
 
+//Dakota Jacobs
 void hangman_hang(int x) 
 {
     int counter=0;
