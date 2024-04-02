@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Contributors: Nhi Nguyen
 char* easy_word();
 char* med_word();
 char* hard_word();
