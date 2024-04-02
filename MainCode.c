@@ -4,6 +4,8 @@
 #include <string.h>
 #include <ctype.h>
 
+//Contributors: Nhi Nguyen & Dakota Jacobs
+
 char* easy_word();
 char* med_word();
 char* hard_word();
