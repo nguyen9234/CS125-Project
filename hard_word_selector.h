@@ -1,0 +1,1 @@
+char* hard_word();
