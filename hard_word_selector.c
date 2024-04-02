@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Contributors: Nhi Nguyen
+
 // Function puts in med words into the file 
 // Uses random number generator to randomly select word 
 // Returns word
