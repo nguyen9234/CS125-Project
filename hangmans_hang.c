@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+//Contributors: Dakota Jacobs
 void hangman_hang(int x) {
     int counter=0;
      FILE* f = fopen("hangmans_hang.txt", "r");
