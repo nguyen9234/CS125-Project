@@ -1,0 +1,1 @@
+char* easy_word();
