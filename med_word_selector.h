@@ -1,0 +1,1 @@
+char* med_word();
