@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Contributor: Dakota Jacobs
+
 void success()
 {
     FILE* f = fopen("success.txt", "r");
