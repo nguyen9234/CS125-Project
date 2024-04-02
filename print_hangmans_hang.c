@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//Contributors: Dakota Jacobs
 void hangman_hang(int x);
 
 void print_hangmans_hang(int x)
