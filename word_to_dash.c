@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+//Contributors: Dakota Jacobs
+//Debugging: Nhi Nguyen
 //Takes the word and converts it into dashes
 char* dash(char *a)
 {
