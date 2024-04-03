@@ -22,16 +22,3 @@ void failure()
         printf("%s", buffer);  
 }
 
-/*int main()
-{
-    int x;
-    printf("Win or lose, (1 or 0) ");
-    scanf("%d", &x);
-    
-    if(x==1){
-        success();
-    }
-    else{
-        failure();
-    }
-}
