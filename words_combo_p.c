@@ -14,6 +14,7 @@ char* choose_level(int a)
 {
   //Variables
   char* word;
+  int option;
   
   //Error Checking: if users type in a number larger than 3 or a letter
   while((a > 3) || (scanf("%d", &a) != 1))
