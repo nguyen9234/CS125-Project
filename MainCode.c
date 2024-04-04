@@ -8,11 +8,7 @@
 //Note: Dakota contributed with ASCII art
 
 //Call other files
-#include "easy_word_selector.h"
-#include "med_word_selector.h"
-#include "hard_word_selector.h"
-#include "hangmans_hang.h"
-#include "print_title.h"
+#include "header.h"
 
 char* choose_level(int a);
 char* dash(char *a);
