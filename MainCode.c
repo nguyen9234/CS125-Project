@@ -35,10 +35,9 @@ int main()
     printf("    'Rules of the game'\n");
     printf("1) Only guess 1 letter at a time, otherwise it will only take the first\n");
     printf("2) You have 6 chances to guess correctly\n");
-    printf("3) Have FUN :] \n\n");
+    printf("3) 
+    printf("4) Have FUN :] \n\n");
     printf("What level would you like to play? (1=easy, 2=medium, 3=hard)");
-    scanf("%d", &option);
-    //win_lose = letter_checker(option);
     win_lose = letter_checker(option);
     if (win_lose ==1)
     {
