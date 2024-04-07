@@ -2,6 +2,7 @@
 
 //Contributor: Dakota Jacobs
 
+//Opens success Ascii Art
 void success()
 {
     FILE* f = fopen("success.txt", "r");
@@ -12,6 +13,7 @@ void success()
         printf("%s", buffer);  
 }
 
+//Opens fail Ascii Art
 void failure()
 {
     FILE* f = fopen("failure.txt", "r");
