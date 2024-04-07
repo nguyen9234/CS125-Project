@@ -16,8 +16,8 @@ char* choose_level(int a)
   char* word;
   int option;
   int rf = scanf("%d", &a);
-  //Error Checking: if users type in a number larger than 3 or a letter
-  while((a > 3) || (rf != 1))
+  //Error Checking: if users type in a number larger than 3, smaller than 1, or a letter
+  while((a > 3) || (a < 1) || (rf != 1))
   {
       printf("Invalid option\n");
       printf("What level would you like to play? (1=Easy, 2=Medium, 3=Hard) ");
