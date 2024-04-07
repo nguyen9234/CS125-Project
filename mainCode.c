@@ -36,7 +36,7 @@ int main()
     printf("    'Rules of the game'\n");
     printf("1) Only guess 1 letter at a time, otherwise it will only take the first\n");
     printf("2) You have 7 chances to guess correctly\n");
-    printf("3) Easy words are 5 letters, Medium words are 7 letters, and Hard words are 11 letters
+    printf("3) Easy words are 5 letters, Medium words are 7 letters, and Hard words are 11 letters\n");
     printf("4) Have FUN :] \n\n");
     printf("What level would you like to play? (1=Easy, 2=Medium, 3=Hard)");
 
