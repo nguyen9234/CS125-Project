@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 //Contributors: Dakota Jacobs
-//Prints the error hangman
+//Sets the error hangman
 void hangman_hang(int x) {
     int counter=0;
      FILE* f = fopen("hangmans_hang.txt", "r");
@@ -42,6 +42,8 @@ void hangman_hang(int x) {
 
 
 //Contributors: Dakota Jacobs
+
+//Prints error hangman
 void print_hangmans_hang(int x)
 {
     if (x == 0){
@@ -71,6 +73,8 @@ void print_hangmans_hang(int x)
 
 
 //Contributors: Dakota Jacobs
+
+//Prints title at start of game
 void calltitle()
 {
         FILE* f = fopen("Hangman.txt", "r");
