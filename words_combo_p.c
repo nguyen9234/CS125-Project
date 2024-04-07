@@ -16,12 +16,11 @@ char* choose_level(int a)
   char* word;
   int option;
   int rf = scanf("%d", &a);
-  
   //Error Checking: if users type in a number larger than 3 or a letter
-  while((a > 3) || (a < 0) || (rf != 1))
+  while((a > 3) || (rf != 1))
   {
       printf("Invalid option\n");
-      printf("What level would you like to play?");
+      printf("What level would you like to play? (1=Easy, 2=Medium, 3=Hard) ");
       scanf("%*c%d", &a);
       
       if ((a == 1) || (a == 2) || (a == 3))
@@ -56,7 +55,7 @@ char* dash(char *a)
     //Using the string length, initializes values into the array
     for(x=0; x<(len); x++)
     {
-        null_word[x] = '_';
+        null_word[x] = '-';
     }
     null_word[len]='\0';
     
